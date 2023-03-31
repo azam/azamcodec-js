@@ -1,6 +1,6 @@
 {
   "name": "azamcodec",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Encoder and decoder library for Azam Codec",
   "type": "module",
   "main": "src/index.js",
