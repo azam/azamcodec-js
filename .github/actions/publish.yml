@@ -1,0 +1,35 @@
+name: publish
+
+on:
+  release:
+    types:
+      - published
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      # Setup .npmrc file to publish to npm
+      - name: setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: 'https://registry.npmjs.org'
+      - name: npm-ci
+        run: npm ci
+      - name: npm-build
+        run: npm run build
+      - name: npm-publish-dry-run
+        run: npm publish --dry-run
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - name: npm-publish
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
