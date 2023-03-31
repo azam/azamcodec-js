@@ -20,7 +20,7 @@ on:
 
 jobs:
   run-tests:
-    name: run-tests-on-${{matrix.channel}}
+    name: run-tests
     strategy:
       matrix:
         node:
