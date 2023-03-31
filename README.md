@@ -1,7 +1,7 @@
-# azamcodec-rs
+# azamcodec-js
 
 [![Build Status](https://github.com/azam/azamcodec-js/actions/workflows/build.yml/badge.svg)](https://github.com/azam/azamcodec-js/actions/workflows/build.yml)
-[![npm](https://badge.fury.io/js/azamcodec.svg)](https://badge.fury.io/js/azamcodec)
+[![npm](https://badge.fury.io/js/azamcodec.svg)](https://www.npmjs.com/package/azamcodec)
 
 An encoder and decoder implementation in Javascript for [Azam Codec](https://github.com/azam/azamcodec), a lexicographically sortable multi-section base16 encoding of byte array. Zero external dependencies.
 
@@ -17,7 +17,7 @@ Import the module and start using it.
 ### Decoding
 
 ```js
-import { decodeInt, decodeInts } from '@azamshul/azamcodec';
+import { decodeInt, decodeInts } from 'azamcodec';
 
 // Decode first section of Azam Codec encoded string as unsigned integer.
 // "xytxvyyf" decodes to 0xdeadbeefu32, the rest of string is ignored.
@@ -33,7 +33,7 @@ let x = decodeInts('xytxvyyfh5wgg1'); // [0xdeadbeefu32, 0x15u8, c001u16]
 ### Encoding
 
 ```js
-import { encodeInt, encodeInts } from '@azamshul/azamcodec';
+import { encodeInt, encodeInts } from 'azamcodec';
 
 // Encode unsigned integer value as Azam Codec encoded string.
 // 0xdeadbeef encodes to "xytxvyyf".
