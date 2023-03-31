@@ -1,7 +1,7 @@
 # azamcodec-js
 
 [![Build Status](https://github.com/azam/azamcodec-js/actions/workflows/build.yml/badge.svg)](https://github.com/azam/azamcodec-js/actions/workflows/build.yml)
-[![npm](https://badge.fury.io/js/azamcodec.svg)](https://badge.fury.io/js/azamcodec)
+[![npm](https://badge.fury.io/js/azamcodec.svg)](https://www.npmjs.com/package/azamcodec)
 
 An encoder and decoder implementation in Javascript for [Azam Codec](https://github.com/azam/azamcodec), a lexicographically sortable multi-section base16 encoding of byte array. Zero external dependencies.
 
